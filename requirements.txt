@@ -13,3 +13,4 @@ sqlparse==0.4.2
 tomli==1.2.3
 typing-extensions==4.0.1
 whitenoise==5.3.0
+pymysql==0.9.3
