@@ -1,7 +1,3 @@
-from pyexpat import model
-from statistics import mode
-from urllib import request
-from venv import create
 from django.db import models
 from django.contrib.auth.models import User
 
