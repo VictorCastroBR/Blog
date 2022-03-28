@@ -1,7 +1,9 @@
 # Blog para Sifat Sistemas 
 ### Desenvolvido com Django Framework e Python. 🐍
 ### Utilizando o banco de dados MySQL. 
-##### Site para criação, edição, exclusão e visualisação das post's, em cada post é possível comenetar na publicação:
+##### Site para criação, edição, exclusão e visualisação das post's, em cada post é possível comenetar na publicação, sistema de multiusuários:
+
+##### ✔ Informações salvas em letra maiúscula. 
 
 <br> <br>
 
