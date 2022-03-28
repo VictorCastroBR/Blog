@@ -6,4 +6,4 @@ __pycache__/
 db.sqlite3
 .*_cache
 .vscode
-local_Settinfs.py
+local_settinfs.py
