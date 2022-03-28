@@ -21,6 +21,7 @@ from post import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('about/', views.about),
     path('login/', views.login_user),
     path('login/auth/', views.login_auth),
     path('logout/', views.logout_user),

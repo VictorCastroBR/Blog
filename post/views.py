@@ -35,7 +35,11 @@ def login_auth(request):
 
 def logout_user(request):
     logout(request)
+    
     return redirect ('/post/')
+@login_required(login_url='/login/')
+def about(request):
+    return render(request, 'post/about.html')
 
 #Página principal
 @login_required(login_url='/login/')
