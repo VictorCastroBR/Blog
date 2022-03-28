@@ -1,0 +1,53 @@
+{% extends 'post/base.html' %}
+
+{% block title %} {{post.title}} {% endblock %}
+
+{% block content %}
+    <h1 class="m-5">{{post.title}}</h1>
+    <a href="/post/">
+        <button class="btn btn-secondary ms-5">Voltar</button>
+    </a>
+    <div class="container">
+    <div class="card mx-auto m-5" style="max-width: 80%;">
+        <div class="card-header d-flex justify-content-between">
+            <p>Publicado por: {{post.author}}</p>
+            <p>{{post.created|formatar_data}}</p>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{post.title|lower|capfirst }}</h5>
+          <p class="card-text">{{post.text|lower|capfirst }}</p>
+        </div>
+    </div>
+
+        <div class="row mt-5">
+        <div class="col">
+            <h2>Adicione um comentário: </h2>
+            <div class="mx-auto m-5" style="max-width: 80%;">
+                <form class="form-horizontal" action="" method="POST">{% csrf_token %}
+                        <p>Título: </p>
+                    <div class="form-group w-100">{{form.title}}</div>
+                    <p>Descrição: </p>
+                    <div class="form-group w-100">{{form.comment}}</div>
+                    <input class="btn btn-success" type="submit" value="Comentar">
+                </form>
+            </div>
+            </div>
+                <div class="col">
+                    {% if not post.comments.all %}
+                        <h2>Seja o primeiro a comentar:</h2>
+                    {% else %}
+                        <h2>Comentários: </h2>
+                    {% endif %}
+
+                    {% for comment in post.comments.all %}
+                        <article>
+                            <strong>{{ comment.title }} - {{comment.created|formatar_data}}</strong>
+                            <p>{{comment.comment}}</p>
+                        </article>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

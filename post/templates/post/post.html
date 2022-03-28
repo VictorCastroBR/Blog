@@ -1,0 +1,33 @@
+{% extends 'post/base.html' %}
+
+{% block title %} Novo Post {% endblock%}
+
+{% block content %}
+    <h1 class="m-5">Novo post</h1>
+
+    <a href="/post/">
+        <button class="btn btn-secondary ms-5">Voltar</button>
+    </a>
+    
+    <div class="container w50 mx-auto m-5">
+
+            <form action="{% if post %} /post/update/{{post.id}}/ {% else %} /post/postar/ {% endif %}" method="POST"> {% csrf_token %}
+
+                <h4 class="">Título: </h4>
+                <input class="form-control" type="text" id="title" name="title" value="{{post.title|lower|capfirst}}"  required>
+                
+                <h4 class="">Texto: </h4>
+                <div class="w50">  
+                    <textarea class="form-control p10" rows="5" type="text" id="text" name="text">{{post.text|lower|capfirst}}
+                    </textarea>  
+                </div>
+                 
+            
+                <button type="submit" class="btn btn-success btn-block text-white">Postar</button>
+
+            </form> 
+        
+    </div>
+        
+
+    {% endblock %}

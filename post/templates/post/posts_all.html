@@ -1,0 +1,64 @@
+{% extends 'post/base.html' %}
+
+{% block title %} Meu Blog {% endblock%}
+
+{% block content %}
+
+    <div class="container">
+    <h2 class="m-5">Olá, {{request.user}}</h2>
+    {% for post in posts %}
+
+      <article class="card text-center mx-auto m-5 w-50">
+        <div class="card-header">
+          <div class="row">
+
+            <div class="col"></div>
+
+            <div class="col">
+              <!--Author-->   
+              <p>{{post.author}}</p>
+            </div>
+
+            
+            
+            <div class="col">
+              <!--Verifica se o post é do autor logado-->
+              {% if request.user == post.author %}
+              <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                  <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-outline-secondary" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="bi bi-three-dots-vertical"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                      <li><a class="dropdown-item" href="edit/{{post.id}}">Editar</a></li>
+                      <li><a class="dropdown-item" href="delete/{{post.id}}">Excluir</a></li>
+                    </ul>
+                  </div>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+            
+        <div class="card-body">
+            <!--Title-->
+            <h5 class="card-title">{{ post.title|title}}</h5>
+
+            <!--Preview text-->
+            <p class="card-text">{{post.text|title|truncatewords:10}}</p>
+
+            {{ post.body|linebreaks|truncatewords:10 }}
+
+            <!--Btn Detail-->
+            <a href="{{post.id}}/">
+                <button type="button" class="btn btn-primary">Ver mais</button>
+            </a>
+        </div>
+        <div class="card-footer text-muted align-middle">
+          <!--Date-->
+          <p>{{post.created|formatar_data}}</p>
+        </div>
+      </article>
+    {% endfor %}
+    </div>
+{% endblock %}
