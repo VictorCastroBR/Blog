@@ -2,6 +2,8 @@
 ### Desenvolvido com Django Framework e Python 🐍
 ##### Site para criação, edição, exclusão e visualisação das post's, em cada post é possível comenetar na publicação:
 
+<br> <br>
+
 ##### Página de login
 ![image](https://user-images.githubusercontent.com/56875087/160398188-c34cfc5e-c9bd-4d3e-8133-d9bb994a9471.png)
 
