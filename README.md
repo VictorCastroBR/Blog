@@ -11,6 +11,6 @@
 ![image](https://user-images.githubusercontent.com/56875087/160398188-c34cfc5e-c9bd-4d3e-8133-d9bb994a9471.png)
 
 ##### Página de listagem dos post's
-<il> Postagem ordenadas por data de postagem, da mais recente para a menos recente. 
+<li> Postagem ordenadas por data de postagem, da mais recente para a menos recente. </li>
   
 ![image](https://user-images.githubusercontent.com/56875087/160398513-8563007f-0c1a-4bf7-9234-33ddd1121a13.png)
