@@ -1,3 +1,7 @@
-# Meu blog 
+# Blog para Sifat Sistemas 
+## Desenvolvido com Django Framework e Python
 
-https://github.com/VictorCastroBR/Blog/blob/master/cap_telas/Captura%20de%20tela%20de%202022-03-28%2003-54-43.png
+
+
+
+![image](https://user-images.githubusercontent.com/56875087/160389467-d890add7-66c7-46d1-997f-05298000114f.png)
