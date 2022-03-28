@@ -14,3 +14,7 @@
 <li> Postagem ordenadas por data de postagem, da mais recente para a menos recente. </li>
   
 ![image](https://user-images.githubusercontent.com/56875087/160398513-8563007f-0c1a-4bf7-9234-33ddd1121a13.png)
+
+##### Se o post for do usuário logado, um botão habilitará com duas opçções como excluir o post ou edita-lo
+![image](https://user-images.githubusercontent.com/56875087/160399639-02ed15e6-7bae-4390-b496-29369e2ea55d.png)
+
